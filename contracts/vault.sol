@@ -32,6 +32,9 @@ modifier onlyOwner(){
 
     
 }
+
+event grantAlert(uint indexed id,  address indexed beneficiary, uint indexed time);
+
 uint[] id;
 BeneficiaryProperties[] public bp;
 
@@ -59,7 +62,12 @@ function createGrant(address _beneficiary, uint _time) external payable onlyOwne
     id.push(_id);
     bp.push(BP);
     ID++;
+
+    emit grantAlert(ID, _beneficiary, _time );
+
     return _id;
+
+
 
 }
 function withdraw(uint _id) external {

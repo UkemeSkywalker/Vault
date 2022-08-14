@@ -9,7 +9,12 @@ module.exports = {
   networks: {
     rinkeby: {
       url: process.env.RINKEBY_RPC_URL,
-      accounts: [process.env.RINKEBY_PRIVATE_KEY]
-    }
+      accounts: [process.env.GANDALF_PRIVATE_KEY]
+    },
+    // ropsten: {
+    //   url: process.env.VAULT_ROPSTEN_RPC_URL,
+    //   accounts: [process.env.DEAMON_PRIVATE_KEY]
+    // }
+
   }
 };
